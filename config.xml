@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.shadow.sun"
+        versionCode="25" 
+        version   = "1.2.5">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>SunNshadow</name>
+
+    <description>
+        SunNshadow
+    </description>
+
+    <author href="http://mc96107.droppages.com/Contact" email="mc96107@gmail.com">
+        Dimitris Gardiklis
+    </author>
+	<icon src="images/sunshadow.png" />
+	<gap:splash src="images/sunshadow_splash.png" />
+
+</widget>
