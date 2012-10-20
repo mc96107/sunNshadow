@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 My GitHub Page
 =======
 <!DOCTYPE html>
@@ -62,3 +63,105 @@ By pressing the button "calculation per hour and month" the shadow is calculated
   </body>
 </html>
 >>>>>>> aa7a22b6756c85e6d8b326964cf8b40339f57d70
+=======
+﻿<!DOCTYPE html> 
+<html> 
+    <head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title> </title> 
+    <link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/cordova-1.7.0rc1.js"></script>
+	<script src="js/jquery.mobile-1.1.0.min.js"></script>
+<script src="js/suncalc-min.js"></script>
+    <script src="js/main1.js"></script>
+	<script src="js/jclock.js"></script>
+</head> 
+
+<body> 
+<div data-role="page" id="aboutPage" data-theme="b">
+<div data-role="content">
+<center>
+<img src="images/sunshadow.png" />
+</center>
+<a href="#mainPage" data-role="button" id="button1">start</a><br>
+<p>
+<strong>SunNShadow</strong>
+This is a tool for calculating sun azimuth and altitude at any given time. It can also determine if a shadow is cast from a specified obstacle.
+</p>
+<p><strong>Sun position</strong>
+In the beginning the latitude, longitude and current time are automatically set. Then by moving any slider or inputting any value, the results are presented in the appropriate fields. 
+</p><p>
+<strong>Shadow</strong>
+By pressing the "obstacle" switch, the phone heading is determined to be used as the direction towards the obstacle. This can also be changed manually (obstacle direction).  In the fields obstacle distance and height, the values for the obstacle are declared. In the “sun shadow” field the difference between the distance from the obstacle and the shadow length is calculated for the specified time. If the difference is < 0 then the shadow overlaps the calculation point. 
+</p>
+<p>
+<strong>Batch shadow calculation</strong>
+By pressing the button "calculation per hour and month" the shadow is calculated for every hour and month. A list is printed for the times when the shadow reaches the calculation point. 
+</p>
+<br>
+Dimitris Gardiklis<br>
+<a href="http://mc96107.droppages.com/Contact"> contact info </a><br><br>
+</div>
+</div>
+
+<div data-role="page" id="mainPage" data-theme="b">
+<center><canvas id="jclock" height="250" width="250">
+  Content or message to display if the browser does not support Canvas/HTML5.
+</canvas></center>
+<script>
+$(window).load(function() {
+  new jClock('images/compass.png', $('#jclock').get(0));
+});
+</script>
+<div data-role="content">
+<div data-role="fieldcontain">
+	<label for="compass"> obstacle: </label>
+	<select name="compass" id="compass" data-role="slider" >
+		<option value="0">Off</option>
+		<option value="1">On</option>
+	</select><br>
+	<label for="comphead"> compass: </label>
+	<input type="text" id="comphead" name="comphead" />
+	<label for="lat">latitude: </label>
+    <input type="text" id="lat" name="lat" value=""  placeholder="lat"/><br>
+	<label for="lon"> longitude: </label>
+    <input type="text" id="lon" name="lon" value=""  placeholder="lon"/><br>
+	<label for="day"> day: </label>
+	<input type="range" id="day" name="day"  min="1" max="31" /><br>
+	<label for="month"> month: </label>
+	<input type="range" id="month" name="month" min="1" max="12" /><br>
+	<label for="hour"> hour: </label>
+	<input type="range" id="hour" name="hour" min="0" max="23" /><br>
+	<label for="ax"> obstacle distance: </label>
+	<input type="range" id="ax" name="ax" value="3" min="0" max="20" step="0.1"  /><br>
+	<label for="ay"> obstacle height: </label>
+	<input type="range" id="ay" name="ay" value="1.5" min="0" max="20" step="0.1"  /><br>
+	<label for="ar"> obstacle direction: </label>
+	<input type="range" id="ar" name="ar"  value="180" min="0" max="360" /><br>
+	<center><strong>Results</strong></center>
+<label for="azimuth"> sun azimuth: </label>
+<input type="text" id="azimuth" name="azimuth" value="0"  />
+<label for="altitude"> sun altitude: </label>
+<input type="text" id="altitude" name="altitude" value="0"  />
+<label for="shadow"> sun shadow: </label>
+<input type="text" id="shadow" name="shadow" value="0"  />
+<a href="#resPage"  type="button" id="button2">calculation per hour and month</a> 
+	<center><strong>Panel</strong></center>
+<label for="ori1"> surface azimuth: </label>
+<input type="range" id="ori1" name="ori1" value="0" min="-180" max="180" /><br>
+<label for="incl"> surface inclination: </label>
+<input type="range" id="incl" name="incl" value="0" min="0" max="90" /><br>
+<label for="flux"> Clear-sky global irradiance : </label>
+<input type="text" id="flux" name="flux" value="0"  />
+</div>
+
+</div>  
+</div>
+<div data-role="page" id="resPage" data-theme="b">
+<a href="#mainPage"  type="button"" >back</a> 
+<ul id="linksList" data-role="listview" data-inset="true"></ul>
+</div>
+</body>
+</html>
+>>>>>>> eee5f93cdc0503a50b9b07786aa485309a9ad3b3
