@@ -1,0 +1,13 @@
+{
+  "name": "sunNshadow",
+  "description": "sunNshadow",
+  "launch_path": "/",
+  "icons": {
+    "128": "/images/sunshadow128.png"
+  },
+  "developer": {
+    "name": "Dimitris Gardiklis",
+    "url": "https://play.google.com/store/apps/details?id=com.shadow.sun"
+  },
+  "default_locale": "en"
+}
