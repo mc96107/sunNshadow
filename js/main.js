@@ -12,23 +12,28 @@ function renderEntries(entries) {
 }
 	
 $("#mainPage").live("pageinit", function(event) {
+var watchID = null;
 $('#compass').bind( "change", function(event, ui) {
-  if (navigator.geolocation)
-    {
-    navigator.geolocation.watchPosition(onSuccess);
-    }
-  else
-    {
-      $("#comphead").val(0);
-     }
-  });
+           if ($('#compass').val()==1) {
+   
+		navigator.compass.clearWatch(watchID);
+		options = { frequency: 200 };
+watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+		   }
+		   else
+		   {
+		navigator.compass.clearWatch(watchID);
+		options = { frequency: 200 };
+watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);		   
+		   }
+       });
 
    // onSuccess: Get the current heading
    function onStartSuccess(heading) {
-   $("#comphead").val(position.coords.heading);
+   $("#comphead").val(heading.magneticHeading);
     }
    function onSuccess(heading) {
-   $("#comphead").val(position.coords.heading);
+   $("#comphead").val(heading.magneticHeading);
    $("#ar").val($("#comphead").val());
    shfun(); // να το δοκιμάσω
     }
@@ -45,7 +50,7 @@ $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
 var options = { frequency: 200 };
-navigator.geolocation.watchPosition(onSuccess);
+watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);
     }
     function onError1(error) {
 $("#lat").val(38);
