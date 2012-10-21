@@ -12,28 +12,23 @@ function renderEntries(entries) {
 }
 	
 $("#mainPage").live("pageinit", function(event) {
-var watchID = null;
 $('#compass').bind( "change", function(event, ui) {
-           if ($('#compass').val()==1) {
-   
-		navigator.compass.clearWatch(watchID);
-		options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onSuccess, onError, options);
-		   }
-		   else
-		   {
-		navigator.compass.clearWatch(watchID);
-		options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);		   
-		   }
-       });
+  if (navigator.geolocation)
+    {
+    navigator.geolocation.watchPosition(onSuccess);
+    }
+  else
+    {
+      $("#comphead").val(0);
+     }
+  });
 
    // onSuccess: Get the current heading
    function onStartSuccess(heading) {
-   $("#comphead").val(heading.magneticHeading);
+   $("#comphead").val(position.coords.heading);
     }
    function onSuccess(heading) {
-   $("#comphead").val(heading.magneticHeading);
+   $("#comphead").val(position.coords.heading);
    $("#ar").val($("#comphead").val());
    shfun(); // να το δοκιμάσω
     }
