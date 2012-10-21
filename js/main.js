@@ -45,7 +45,7 @@ $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
 var options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);
+navigator.geolocation.watchPosition(onSuccess);
     }
     function onError1(error) {
 $("#lat").val(38);
