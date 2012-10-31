@@ -26,7 +26,7 @@ This is a tool for calculating sun azimuth and altitude at any given time. It ca
 In the beginning the latitude, longitude and current time are automatically set. Then by moving any slider or inputting any value, the results are presented in the appropriate fields. 
 </p><p>
 <strong>Shadow</strong>
-By pressing the "obstacle" switch, the phone heading is determined to be used as the direction towards the obstacle. This can also be changed manually (obstacle direction).  In the fields obstacle distance and height, the values for the obstacle are declared. In the “sun shadow” field the difference between the distance from the obstacle and the shadow length is calculated for the specified time. If the difference is < 0 then the shadow overlaps the calculation point. 
+In the fields obstacle distance and height, the values for the obstacle are declared. In the “sun shadow” field the difference between the distance from the obstacle and the shadow length is calculated for the specified time. If the difference is < 0 then the shadow overlaps the calculation point. 
 </p>
 <p>
 <strong>Batch shadow calculation</strong>
@@ -49,13 +49,6 @@ $(window).load(function() {
 </script>
 <div data-role="content">
 <div data-role="fieldcontain">
-	<label for="compass"> obstacle: </label>
-	<select name="compass" id="compass" data-role="slider" >
-		<option value="0">Off</option>
-		<option value="1">On</option>
-	</select><br>
-	<label for="comphead"> compass: </label>
-	<input type="text" id="comphead" name="comphead" />
 	<label for="lat">latitude: </label>
     <input type="text" id="lat" name="lat" value=""  placeholder="lat"/><br>
 	<label for="lon"> longitude: </label>
