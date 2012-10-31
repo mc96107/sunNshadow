@@ -3,7 +3,7 @@
   "description": "sunNshadow",
   "launch_path": "/",
   "icons": {
-    "128": "/images/sunshadow128.png"
+    "128": "/images/icon128.png"
   },
   "developer": {
     "name": "Dimitris Gardiklis",
