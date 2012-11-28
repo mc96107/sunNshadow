@@ -10,4 +10,9 @@
     "url": "https://twitter.com/gardiklis"
   },
   "default_locale": "en"
+  "permissions": {
+  "geolocation": {
+    "description": "Obtain the current location of the user"
+  }
+}
 }
