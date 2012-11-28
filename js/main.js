@@ -14,7 +14,6 @@ $(document).ready(function() {
 $('#install_app').click(function(){
     var request = window.navigator.mozApps.install('http://mc96107.github.com/sunNshadow/manifest.webapp');
     request.onsuccess = function () {
-alert('clicl');
 	// Save the App object that is returned
       var appRecord = this.result;
     };
