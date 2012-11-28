@@ -10,7 +10,21 @@ function renderEntries(entries) {
     $("#linksList").html(s);
     $("#linksList").listview("refresh");	
 }
-	
+$(document).ready(function() {
+$('#install_app').click(function(){
+    var request = window.navigator.mozApps.install('http://mc96107.github.com/sunNshadow/manifest.webapp');
+    request.onsuccess = function () {
+alert('clicl');
+	// Save the App object that is returned
+      var appRecord = this.result;
+    };
+    request.onerror = function () {
+      // Display the error information from the DOMError object
+      alert('Install failed, error: ' + this.error.name);
+    };
+  });
+});
+
 $("#mainPage").live("pageinit", function(event) {
 var watchID = null;
 $('#compass').bind( "change", function(event, ui) {
