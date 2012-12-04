@@ -25,11 +25,13 @@ $('#install_app').click(function(){
 });
 
 $("#mainPage").live("pageinit", function(event) {
+var watchID = null;
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);
 				$("#ar").val($("#comphead").val());
+				shfun(); 
 				});		
 		   }
 		   else
