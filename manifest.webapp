@@ -5,6 +5,7 @@
   "icons": {
     "128": "/sunNshadow/images/icon128.png"
   },
+  "orientation": "portrait",
   "developer": {
     "name": "Dimitris Gardiklis",
     "url": "https://twitter.com/gardiklis"

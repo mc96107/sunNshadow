@@ -25,45 +25,24 @@ $('#install_app').click(function(){
 });
 
 $("#mainPage").live("pageinit", function(event) {
-var watchID = null;
+window.addEventListener("deviceorientation", function(e) {
+});		
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
-   
-		navigator.compass.clearWatch(watchID);
-		options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onSuccess, onError, options);
+				$("#comphead").val(e.alpha - 180);
+				$("#ar").val($("#comphead").val());
 		   }
 		   else
 		   {
-		navigator.compass.clearWatch(watchID);
-		options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);		   
+				$("#comphead").val(e.alpha - 180);	   
 		   }
        });
-
-   // onSuccess: Get the current heading
-   function onStartSuccess(heading) {
-   $("#comphead").val(heading.magneticHeading);
-    }
-   function onSuccess(heading) {
-   $("#comphead").val(heading.magneticHeading);
-   $("#ar").val($("#comphead").val());
-   shfun(); // να το δοκιμάσω
-    }
- 
-   // onError: Failed to get the heading
-   function onError(compassError) {
-       alert('Compass Error:');
-   }
-
-
 //gps//
 function onSuccess1(position) {
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
-var options = { frequency: 200 };
-watchID = navigator.compass.watchHeading(onStartSuccess, onError, options);
+$("#comphead").val(e.alpha - 180);
     }
     function onError1(error) {
 $("#lat").val(38);
@@ -223,4 +202,4 @@ entry = {title:"hour:"+i_hour+", day:"+i_day+", month"+i_month+", shadow length:
 renderEntries(entries);
 });
 });	
-	
+
