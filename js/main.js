@@ -25,16 +25,18 @@ $('#install_app').click(function(){
 });
 
 $("#mainPage").live("pageinit", function(event) {
-window.addEventListener("deviceorientation", function(e) {
-});		
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
+				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha - 180);
 				$("#ar").val($("#comphead").val());
+				});		
 		   }
 		   else
 		   {
-				$("#comphead").val(e.alpha - 180);	   
+				window.addEventListener("deviceorientation", function(e) {
+				$("#comphead").val(e.alpha - 180);	
+				});					
 		   }
        });
 //gps//
@@ -42,6 +44,7 @@ function onSuccess1(position) {
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
+window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha - 180);});		
 $("#comphead").val(e.alpha - 180);
     }
     function onError1(error) {
