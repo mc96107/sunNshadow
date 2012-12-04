@@ -30,6 +30,7 @@ $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);
+				watchID=e.alpha;
 				$("#ar").val($("#comphead").val());
 				shfun(); 
 				});		
@@ -38,6 +39,7 @@ $('#compass').bind( "change", function(event, ui) {
 		   {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);	
+				$("#ar").val(watchID);
 				});					
 		   }
        });
