@@ -28,14 +28,14 @@ $("#mainPage").live("pageinit", function(event) {
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
-				$("#comphead").val(e.alpha - 180);
+				$("#comphead").val(e.alpha);
 				$("#ar").val($("#comphead").val());
 				});		
 		   }
 		   else
 		   {
 				window.addEventListener("deviceorientation", function(e) {
-				$("#comphead").val(e.alpha - 180);	
+				$("#comphead").val(e.alpha);	
 				});					
 		   }
        });
@@ -44,8 +44,8 @@ function onSuccess1(position) {
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
-window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha - 180);});		
-$("#comphead").val(e.alpha - 180);
+window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);});		
+$("#comphead").val(e.alpha);
     }
     function onError1(error) {
 $("#lat").val(38);

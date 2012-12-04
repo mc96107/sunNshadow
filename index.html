@@ -10,6 +10,7 @@
 <script src="js/suncalc-min.js"></script>
     <script src="js/main.js"></script>
 	<script src="js/jclock.js"></script>
+	<style>#hidden {display:none;}</style>
 </head> 
 <body> 
 <div data-role="page" id="aboutPage" data-theme="b">
@@ -56,8 +57,9 @@ $(window).load(function() {
 		<option value="0">Off</option>
 		<option value="1">On</option>
 	</select><br>
+	<div id="hidden">
 	<label for="comphead"> compass: </label>
-	<input type="text" id="comphead" name="comphead" />
+	<input type="text" id="comphead" name="comphead" /></div>
 	<label for="lat">latitude: </label>
     <input type="text" id="lat" name="lat" value=""  placeholder="lat"/><br>
 	<label for="lon"> longitude: </label>
