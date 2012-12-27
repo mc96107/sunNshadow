@@ -1,11 +1,17 @@
-﻿<!DOCTYPE html> 
+<!DOCTYPE html> 
 <html  manifest="example.appcache"> 
     <head> 
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <title></title> 
+<<<<<<< HEAD
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+=======
+    <link rel="stylesheet" href="js/jquery.mobile-1.1.0.min.css" />
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="js/jquery.mobile-1.1.0.min.js"></script>
+>>>>>>> added minutes
 <script src="js/suncalc-min.js"></script>
     <script src="js/main.js"></script>
 	<script src="js/jclock.js"></script>
@@ -69,6 +75,8 @@ $(window).load(function() {
 	<input type="range" id="month" name="month" min="1" max="12" /><br>
 	<label for="hour"> hour: </label>
 	<input type="range" id="hour" name="hour" min="0" max="23" /><br>
+	<label for="minute"> minute: </label>
+	<input type="range" id="minute" name="minute" min="0" max="60" /><br>
 	<label for="ax"> obstacle distance: </label>
 	<input type="range" id="ax" name="ax" value="3" min="0" max="20" step="0.1"  /><br>
 	<label for="ay"> obstacle height: </label>
