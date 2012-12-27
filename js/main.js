@@ -1,4 +1,4 @@
-﻿
+
 // Dimitris Gardiklis
 var TITLE = "Shadows";
   
@@ -61,6 +61,7 @@ var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
 $("#day").val(currentTime.getDate());
 $("#hour").val(currentTime.getHours());
+$("#minute").val(currentTime.getMinutes());
 var m   = Math;
 //Radiation https://github.com/pingswept/pysolar/blob/f09e54e09291a428e7b5f35a72dcc02a9c07438e/radiation.py
 // Calculate different kinds of radiation components via default values
@@ -131,7 +132,7 @@ else
 
 function shfun()
 {
-var dd = new Date(currentTime.getFullYear(), $("#month").val()-1, $("#day").val(), $("#hour").val(), 0, 0, 0); 
+var dd = new Date(currentTime.getFullYear(), $("#month").val()-1, $("#day").val(), $("#hour").val(), $("#minute").val(), 0, 0); 
 var az1m = SunCalc.getPosition(dd, $("#lat").val(), $("#lon").val()).azimuth * 180 / Math.PI;
 var altitud1 = SunCalc.getPosition(dd, $("#lat").val(), $("#lon").val()).altitude * 180 / Math.PI;
 $("#azimuth").val(az1m);
@@ -162,6 +163,8 @@ shfun();});
 $('#day').bind("change",function(){
 shfun();});
 $('#hour').bind("change",function(){
+shfun();});
+$('#minute').bind("change",function(){
 shfun();});
 $('#ar').bind("change",function(){
 shfun();});
