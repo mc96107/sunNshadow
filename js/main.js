@@ -57,7 +57,7 @@ $("#lat").val(38);
 $("#lon").val(23.4);
 shfun();
 }
-navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
+navigator.geolocation.getCurrentPosition(onSuccess1, onError1, {timeout:10000});
 
 var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
