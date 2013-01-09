@@ -1,4 +1,3 @@
-
 // Dimitris Gardiklis
 var TITLE = "Shadows";
   
@@ -52,6 +51,7 @@ window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.a
 $("#comphead").val(e.alpha);
     }
     function onError1(error) {
+   alert("unable to get real location, using default");
 $("#lat").val(38);
 $("#lon").val(23.4);
 shfun();
