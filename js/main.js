@@ -44,6 +44,7 @@ $('#compass').bind( "change", function(event, ui) {
        });
 //gps//
 function onSuccess1(position) {
+console.log('getting location...');
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
@@ -51,7 +52,7 @@ window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.a
 $("#comphead").val(e.alpha);
     }
     function onError1(error) {
-   alert("unable to get real location, using default");
+   console.log('unable to get real location, using default');
 $("#lat").val(38);
 $("#lon").val(23.4);
 shfun();
