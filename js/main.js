@@ -25,7 +25,6 @@ $('#install_app').click(function(){
 
 $("#mainPage").live("pageinit", function(event) {
 var watchID = null;
-console.log('init');
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
@@ -44,10 +43,6 @@ $('#compass').bind( "change", function(event, ui) {
 		   }
        });
 //gps//
-console.log('before geolocation');
-navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
-console.log('after geolocation');
-
 function onSuccess1(position) {
 console.log('getting location...');
 $("#lat").val(position.coords.latitude);
@@ -55,14 +50,15 @@ $("#lon").val(position.coords.longitude);
 shfun();
 window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);});		
 $("#comphead").val(e.alpha);
-    }
-    function onError1(error) {
-   console.log('unable to get real location, using default');
+}
+function onError1(error) {
+console.log('unable to get real location, using default');
 $("#lat").val(38);
 $("#lon").val(23.4);
 shfun();
-    }
- 
+}
+navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
+
 var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
 $("#day").val(currentTime.getDate());
