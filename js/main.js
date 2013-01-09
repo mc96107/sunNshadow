@@ -44,6 +44,10 @@ $('#compass').bind( "change", function(event, ui) {
 		   }
        });
 //gps//
+console.log('before geolocation');
+navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
+console.log('after geolocation');
+
 function onSuccess1(position) {
 console.log('getting location...');
 $("#lat").val(position.coords.latitude);
@@ -58,9 +62,7 @@ $("#lat").val(38);
 $("#lon").val(23.4);
 shfun();
     }
-    console.log('before geolocation');
-navigator.geolocation.getCurrentPosition(onSuccess1, onError1);
- console.log('after geolocation');
+ 
 var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
 $("#day").val(currentTime.getDate());
