@@ -25,6 +25,7 @@ $('#install_app').click(function(){
 
 $("#mainPage").live("pageinit", function(event) {
 var watchID = null;
+console.log('init');
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
