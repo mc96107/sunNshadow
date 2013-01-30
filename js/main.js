@@ -180,6 +180,8 @@ $('#incl').bind("change",function(){
 shfun();});
 $('#ori1').bind("change",function(){
 shfun();});
+$('#gtnow').click(function(){
+shfun();});
 
 $('#button2').click(function(){
 var startyearDate = new Date(currentTime.getFullYear(), 0, 0, 0 , 0, 0, 0); 
