@@ -22,7 +22,8 @@
       var now = new Date(),
           sec = $("#ar").val(),
           min = ($("#azimuth").val()),
-          hour = 360-$("#comphead").val();
+          hour = 360-$("#comphead").val(),
+		  inclinn = $("#incl").val();
       
       // do the clock
       drawClock();
