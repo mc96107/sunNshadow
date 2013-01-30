@@ -52,9 +52,12 @@ shfun();
 
 window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);}); 		
 $("#comphead").val(e.alpha);
+$("#gtnow").click(function(){
+$("#ori1").val(e.alpha);
+$("#incl").val(-e.beta);
+shfun();
 }
-
-
+}
 function onError1(error) {
 console.log('unable to get real location, using default');
 $("#lat").val(38);
