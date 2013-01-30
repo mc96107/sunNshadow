@@ -49,7 +49,7 @@ console.log('getting location...');
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
-if $("#rltim").val()==0{
+if ($("#rltim").val()==0){
 window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);}); 		
 $("#comphead").val(e.alpha);
 }
