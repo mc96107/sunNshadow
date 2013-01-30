@@ -40,6 +40,7 @@ $('#compass').bind( "change", function(event, ui) {
 		   else
 		   {
 				window.addEventListener("deviceorientation", function(e) {
+				watchID_in=e.beta;
 				$("#comphead").val(e.alpha);	
 				$("#ar").val(watchID);
 				$("#incl").val(watchID_in);
