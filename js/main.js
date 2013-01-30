@@ -50,7 +50,7 @@ $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
 
-window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#ori1").val(e.alpha);$("#incl").val(-e.beta);}); 		
+window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#ori1").val(if(e.alpha<180) e.alpha+180; else e.alpha-180);$("#incl").val(-e.beta);}); 		
 $("#comphead").val(e.alpha);
 }
 function onError1(error) {
