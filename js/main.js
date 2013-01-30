@@ -25,12 +25,15 @@ $('#install_app').click(function(){
 
 $("#mainPage").live("pageinit", function(event) {
 var watchID = null;
+var watchID_in = null;
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);
 				watchID=e.alpha;
+				watchID_in=e.beta;
 				$("#ar").val(watchID);
+				$("#incl").val(watchID_in);
 				shfun(); 
 				});		
 		   }
@@ -39,6 +42,7 @@ $('#compass').bind( "change", function(event, ui) {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);	
 				$("#ar").val(watchID);
+				$("#incl").val(watchID_in);
 				});					
 		   }
        });
