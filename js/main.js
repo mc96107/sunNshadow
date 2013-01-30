@@ -25,7 +25,6 @@ $('#install_app').click(function(){
 
 $("#mainPage").live("pageinit", function(event) {
 var watchID = null;
-var watchID_in = null;
 $('#compass').bind( "change", function(event, ui) {
            if ($('#compass').val()==1) {
 				window.addEventListener("deviceorientation", function(e) {
@@ -33,7 +32,6 @@ $('#compass').bind( "change", function(event, ui) {
 				watchID=e.alpha;
 				watchID_in=e.beta;
 				$("#ar").val(watchID);
-				$("#incl").val(watchID_in);
 				shfun(); 
 				});		
 		   }
@@ -42,7 +40,6 @@ $('#compass').bind( "change", function(event, ui) {
 				window.addEventListener("deviceorientation", function(e) {
 				$("#comphead").val(e.alpha);	
 				$("#ar").val(watchID);
-				$("#incl").val(e.beta);
 				});					
 		   }
        });
@@ -52,9 +49,9 @@ console.log('getting location...');
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
-window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#incl").val(e.beta);});		
+window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#incl").val(-e.beta);});		
 $("#comphead").val(e.alpha);
-$("#incl").val(e.beta);
+$("#incl").val(-e.beta);
 }
 function onError1(error) {
 console.log('unable to get real location, using default');
