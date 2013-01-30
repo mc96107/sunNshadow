@@ -49,9 +49,11 @@ console.log('getting location...');
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
-window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#incl").val(-e.beta);});		
+window.addEventListener("deviceorientation", function(e) {$("#comphead").val(e.alpha);$("#ori1").val(e.alpha);$("#incl").val(-e.beta);shfun(); }); 		
 $("#comphead").val(e.alpha);
+$("#ori1").val(e.alpha);
 $("#incl").val(-e.beta);
+shfun(); 
 }
 function onError1(error) {
 console.log('unable to get real location, using default');
