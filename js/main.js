@@ -1,5 +1,14 @@
 // Dimitris Gardiklis
 var TITLE = "Shadows";
+var request = navigator.mozApps.getSelf();
+request.onsuccess = function() {
+  if (request.result) {
+	document.getElementById('installdiv').innerHTML='';
+  } else {
+    document.getElementById('installdiv').innerHTML='<a href="#"  id="install_app"> Install as a web app. </a>';
+  }
+};
+
   
 function renderEntries(entries) {
     var s = '';
@@ -225,4 +234,3 @@ entry = {title:"hour:"+i_hour+", day:"+i_day+", month"+i_month+", shadow length:
 renderEntries(entries);
 });
 });	
-
