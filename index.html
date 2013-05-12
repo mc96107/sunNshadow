@@ -63,8 +63,7 @@ $(window).load(function() {
 	</select><br>
 	<label for="comphead"> compass: </label>
 	<input type="text" id="comphead" name="comphead" /></div>
-	<button onclick="navigator.geolocation.getCurrentPosition($("#lat").val(position.coords.latitude);
-$("#lon").val(position.coords.longitude););">get position</button>
+	<button id="refreshgps">get posiion</button> 
 	<label for="lat">latitude: </label>
     <input type="text" id="lat" name="lat" value=""  placeholder="lat"/><br>
 	<label for="lon"> longitude: </label>
