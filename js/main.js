@@ -76,7 +76,7 @@ $("#lon").val(23.4);
 shfun();
 }
 navigator.geolocation.getCurrentPosition(onSuccess1, onError1, {timeout:10000});
-
+$('#refreshgps').click(function(){navigator.geolocation.getCurrentPosition(onSuccess1, onError1);}
 var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
 $("#day").val(currentTime.getDate());
