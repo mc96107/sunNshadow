@@ -1,0 +1,40 @@
+CACHE MANIFEST
+#version 1.1 05-06-2013 
+
+CACHE: 
+
+#images 
+images/compass.png
+images/icon128.png
+images/sunshadow.png
+images/sunshadow_splash.png
+js/images/ajax-loader.gif
+js/images/icons-18-black.png
+js/images/icons-18-white.png
+js/images/icons-36-black.png
+js/images/icons-36-white.png
+
+#internal HTML documents 
+
+
+#style sheets 
+
+#style sheet images 
+
+#javascript files 
+js\jquery.mobile-1.1.0.min.css
+js\cordova-1.7.0rc1.js
+js\jclock.js
+js\jquery-1.7.2.min.js
+js\jquery.mobile-1.1.0.min.js
+js\main.js
+js\suncalc-min.js
+js\LICENSE
+mourner-suncalc-f5bbdac\suncalc.js
+mourner-suncalc-f5bbdac\suncalc-min.js
+mourner-suncalc-f5bbdac\LICENSE
+mourner-suncalc-f5bbdac\package.json
+mourner-suncalc-f5bbdac\README.md
+
+NETWORK: 
+
