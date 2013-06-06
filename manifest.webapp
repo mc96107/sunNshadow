@@ -11,6 +11,7 @@
     "name": "Dimitris Gardiklis",
     "url": "https://twitter.com/gardiklis"
   },
+  "appcache_path": "/example.appcache",
   "default_locale": "en",
   "permissions": {
   "geolocation": {
