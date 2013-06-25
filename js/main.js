@@ -54,7 +54,7 @@ $('#compass').bind( "change", function(event, ui) {
        });
 //gps//
 function onSuccess1(position) {
-console.log('getting location...');
+//console.log('getting location...');
 $("#lat").val(position.coords.latitude);
 $("#lon").val(position.coords.longitude);
 shfun();
@@ -76,7 +76,7 @@ $("#lon").val(23.4);
 shfun();
 }
 navigator.geolocation.getCurrentPosition(onSuccess1, onError1, {timeout:10000});
-$('#refreshgps').click(function(){navigator.geolocation.getCurrentPosition(onSuccess1, onError1);});
+$('#refreshgps').click(function(){navigator.geolocation.getCurrentPosition(onSuccess1, onError1, {timeout:600000});});
 var currentTime = new Date();
 $("#month").val(currentTime.getMonth() + 1);
 $("#day").val(currentTime.getDate());
