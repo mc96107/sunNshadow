@@ -11,7 +11,7 @@
     "name": "Dimitris Gardiklis",
     "url": "https://twitter.com/gardiklis"
   },
-  "appcache_path": "sunnshadow/example.appcache",
+  "appcache_path": "/sunnshadow/example.appcache",
   "default_locale": "en",
   "permissions": {
   "geolocation": {
