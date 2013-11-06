@@ -10,9 +10,9 @@
     "name": "Dimitris Gardiklis",
     "url": "https://twitter.com/gardiklis"
   },
-  "appcache_path": "/sunnshadow/example.appcache",
+  "appcache_path": "/sunNshadow/example.appcache",
   "default_locale": "en",
-  "launch_path": "/sunnshadow/index.html",
+  "launch_path": "/sunNshadow/index.html",
   "permissions": {
   "geolocation": {
     "description": "Obtain the current location of the user"
