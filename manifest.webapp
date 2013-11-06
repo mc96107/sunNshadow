@@ -13,6 +13,7 @@
   },
   "appcache_path": "/sunnshadow/example.appcache",
   "default_locale": "en",
+  "launch_path": "/sunnshadow/index.html",
   "permissions": {
   "geolocation": {
     "description": "Obtain the current location of the user"
