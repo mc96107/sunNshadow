@@ -2,7 +2,6 @@
   "version": "1.004",
   "name": "sunNshadow",
   "description": "sunNshadow",
-  "launch_path": "/sunNshadow/",
   "icons": {
     "128": "/sunNshadow/images/icon128.png"
   },
