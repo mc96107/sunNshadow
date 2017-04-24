@@ -11,6 +11,7 @@ request.onsuccess = function() {
 };
 */
 
+/* remove mozApps 
 if (navigator.userAgent.indexOf("Firefox")!=-1){
 var requestt = navigator.mozApps.getSelf();
 requestt.onsuccess = function() {
@@ -20,6 +21,7 @@ requestt.onsuccess = function() {
     document.getElementById('installdiv').innerHTML=' <button onclick="var request = navigator.mozApps.install('+"'"+"http://mc96107.github.io/sunNshadow/manifest.webapp"+"'"+');request.onsuccess = function() {};request.onerror = function() {};"> Install </button>';
   }
 };}
+*/
 
   
 function renderEntries(entries) {
